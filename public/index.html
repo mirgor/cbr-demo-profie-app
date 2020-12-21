@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="/"/>
+</head>
+<body>
+
+<div class="loading-container" id="app">
+    <div class="loading" v-bind:class="{'hidden': !loading}"></div>
+    <div class="" v-if="user">
+        <div class="main-container container">
+            <div class="row">
+                <div class="col-sm">
+                    <div>
+                        I'm: {{user.fullname}}, {{user.international_name}}
+                    </div>
+                    <div>
+                        My rating: {{user.user_field1}} / <span v-if="user.level">{{user.level.maxRating}}</span>
+                    </div>
+                    <div v-if="user.level">
+                        My level: {{user.level.name}}
+                    </div>
+                    <div v-if="user.nextLevel">
+                        Next level: {{user.nextLevel.name}}
+                    </div>
+                </div>
+                <div class="col-sm">
+                    My wallet: {{user.user_field3}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "NODE_ENV=development vue-cli-service --port 8081 serve",
+    "build": "vue-cli-service build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,15 @@
   },
   "homepage": "https://github.com/aslubsky/cbr-demo-profie-app#readme",
   "dependencies": {
-    "vue": "^2.6.12"
+    "axios": "^0.19.2",
+    "bootstrap": "^5.0.0-beta1",
+    "node-sass": "^5.0.0",
+    "reset-css": "^5.0.1",
+    "sass-loader": "^10.1.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.3",
+    "@vue/cli-service": "~4.2.3"
   }
 }
