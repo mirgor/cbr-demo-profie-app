@@ -8,8 +8,7 @@ const apiServer = '';
 
 const app = new Vue({
     el: '#app',
-    components: {
-    },
+    components: {},
     data: {
         loading: false,
         user: null,
@@ -33,7 +32,7 @@ const app = new Vue({
         this.loading = true;
         // console.log('user', (window.parent || {}).baAuthUser);
 
-        if(localStorage.getItem('jwtToken')) {
+        if (localStorage.getItem('jwtToken')) {
             axios.defaults.headers.common['Authorization'] =
                 'Bearer ' + localStorage.getItem('jwtToken');
         }
@@ -58,6 +57,5 @@ const app = new Vue({
                 app.loading = false;
             });
     },
-    methods: {
-    }
+    methods: {}
 });

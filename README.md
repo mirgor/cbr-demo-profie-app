@@ -1,8 +1,8 @@
 ### run 
 
-set 
+set in `vue.config.js`
 ```
-const apiServer = '';
+target: 'https://some-domain-here',
 ```
 your dev server url
 
